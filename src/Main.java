@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         // Configurações do experimento
         int quantidadeGrafosPorTamanho = 10;
-        int[] tamanhosV = {10, 15, 20, 25, 30, 40, 50}; // Escala de crescimento dos testes
+        int[] tamanhosV = {10, 15, 20, 25, 50, 100, 500, 1000, 3000}; // Escala de crescimento dos testes
 
         System.out.println("Iniciando análise de desempenho: Prim vs Kruskal\n");
         System.out.println("Vértices | Tipo         | Tempo Médio Prim (ns) | Tempo Médio Kruskal (ns)");
