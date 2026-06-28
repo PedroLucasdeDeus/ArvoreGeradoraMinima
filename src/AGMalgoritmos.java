@@ -30,7 +30,7 @@ public class AGMalgoritmos {
         boolean[] percorrido = new boolean[numVertices];
         Queue<Aresta> fila = new PriorityQueue<>();
         percorrido[0] = true;
-        fila.addAll(listaAdj.getFirst());
+        fila.addAll(listaAdj.get(0));
         while (arestas < numVertices - 1 && !fila.isEmpty()) {
             Aresta menorAresta = fila.poll();
             if (percorrido[menorAresta.getDestino()] && percorrido[menorAresta.getOrigem()]) continue;
