@@ -11,7 +11,7 @@ public class Main {
         int[] tamanhosV = {10, 15, 20, 25, 50, 100, 500, 1000, 3000}; // Escala de crescimento dos testes
 
         System.out.println("Iniciando análise de desempenho: Prim vs Kruskal\n");
-        System.out.println("Vértices | Tipo         | Tempo Médio Prim (ns) | Tempo Médio Kruskal (ns)");
+        System.out.println("Vértices | Tipo         | Tempo Médio Prim (ms) | Tempo Médio Kruskal (ms)");
         System.out.println("------------------------------------------------------------------");
 
         for (int V : tamanhosV) {
@@ -42,8 +42,8 @@ public class Main {
             long mediaKruskalNaoComp = tempoTotalKruskalNaoCompleto / quantidadeGrafosPorTamanho;
 
             // Formatação alinhada para exibição dos resultados em tabela
-            System.out.printf("%8d | Completo     | %21d | %24d\n", V, mediaPrimComp, mediaKruskalComp);
-            System.out.printf("%8d | Não-Completo | %21d | %24d\n", V, mediaPrimNaoComp, mediaKruskalNaoComp);
+            System.out.printf("%8d | Completo     | %21d | %24d\n", V, mediaPrimComp / 1_000_000, mediaKruskalComp / 1_000_000);
+            System.out.printf("%8d | Não-Completo | %21d | %24d\n", V, mediaPrimNaoComp / 1_000_000, mediaKruskalNaoComp / 1_000_000);
         }
     }
 
