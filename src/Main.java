@@ -4,9 +4,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        int quantidadeGrafosPorTamanho = 10;
+        int quantidadeGrafosPorTamanho = 50;
 
-        int[] tamanhosV = {10, 15, 20, 25, 50, 100, 500, 1000, 3000, 3500};
+        int[] tamanhosV = {50, 100, 200, 300, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2225, 2500};
 
         List<Integer> verticesComp = new ArrayList<>();
         List<Long> primComp = new ArrayList<>();
